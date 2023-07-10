@@ -6,17 +6,24 @@
 Console.Write("Введите номер дня недели ");
 int dayOfTheWeek = int.Parse(Console.ReadLine()!);
 
-string[] array = {"Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"}; //вводим массив названий дней недели
+string[] array = //вводим массив названий дней недели
+{
+    "Понедельник",
+    "Вторник",
+    "Среда",
+    "Четверг",
+    "Пятница",
+    "Суббота",
+    "Воскресенье"
+}; 
 
 if (dayOfTheWeek > 7 || dayOfTheWeek < 1) //проверяем, что число является днем недели
-Console.WriteLine("Ошибка: Введите номер дня недели (от 1 до 7)");
+    Console.WriteLine("Ошибка: Введите номер дня недели (от 1 до 7)");
 else
-Console.WriteLine(DayOf(dayOfTheWeek));
+    Console.WriteLine(DayOf(dayOfTheWeek));
 
 string DayOf(int day) //находим нужный индекс в массиве и возвращаем значения массива
 {
-string outputDay = array[day-1];
-return outputDay;
+    string outputDay = array[day - 1];
+    return outputDay;
 }
-
-
